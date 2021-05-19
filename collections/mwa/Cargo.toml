@@ -1,0 +1,17 @@
+[package]
+name = "mwa"
+version = "0.1.0"
+authors = ["monsieurbadia <iam@monsieurbadia.com>"]
+edition = "2018"
+
+[lib]
+name = "mwa"
+path = "src/lib.rs"
+doctest = false
+
+[[bin]]
+name = "mwa"
+path = "src/main.rs"
+doctest = false
+
+[dependencies]

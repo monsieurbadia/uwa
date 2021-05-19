@@ -1,18 +1,5 @@
-# M.W.A
+fn main() {}
 
-> *macros wit attitudes*
-
-## Usage
-
-```
-use mwa;
-```
-
-## Collections
-
-**testing**
-
-```rust
 #[cfg(test)]
 mod unit_test {
   use mwa::testing::{unit, test, must};
@@ -25,4 +12,3 @@ mod unit_test {
     test!(catch, must!(die: { panic!() } ));
   );
 }
-```
