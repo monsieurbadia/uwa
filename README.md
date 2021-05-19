@@ -1,0 +1,2 @@
+# mhack
+macros with attitude
