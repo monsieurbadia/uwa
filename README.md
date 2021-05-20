@@ -1,28 +1,61 @@
-# M.W.A
+# U.W.A
 
-> *macros wit attitudes*
+> *utils wit attitudes*
 
-## Usage
+## About
 
-```
-use mwa;
-```
+a collection of simple macros that I use in my compilers.
 
 ## Collections
 
-**testing**
+**`use` `uwa::ch`**
+
+**is**
 
 ```rust
-#[cfg(test)]
-mod unit_test {
-  use mwa::testing::{unit, test, must};
+match c {
+  c if is!(eof c),
+  c if is!(newline c),
+  c if is!(quote c),
+  c if is!(quote c),
+  c if is!(single_quote c),
+  c if is!(double_quote c),
+  c if is!(number c),
+  c if is!(zero c),
+  c if is!(ident c),
+  c if is!(underscore c),
+  c => print!("\nunknown char"),
+}
+```
 
-  unit!(
-    test!(be_equal, must!(eq: 0, 0));
-    test!(not_equal, must!(ne: 1, 0));
-    test!(be_truthy, must!(truthy: true));
-    test!(be_falsy, must!(falsy: false));
-    test!(catch, must!(die: { panic!() } ));
-  );
+**`use` `uwa::file`**
+
+**read ~file**
+
+```rust
+match read!(file "Cargo.toml") {
+  Ok(f) => print!("\n{}", f),
+  Err(e) => print!("\n", e),
+}
+```
+
+**read ~line**
+
+```rust
+loop {
+  match read!(line "Cargo.toml") {
+    Ok(line) => print!("\n{}", line),
+    Err(e) => print!("\n", e),
+  }
+}
+```
+
+**`use` `uwa::result`**
+
+**result_or ~die**
+
+```rust
+fn parse(t: Token) {
+  result_or!(die Ok(t))
 }
 ```

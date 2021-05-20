@@ -1,6 +1,6 @@
 [workspace]
 members = [
-	"collections/mwa",
+	"collections/uwa",
 ]
 
 exclude = [

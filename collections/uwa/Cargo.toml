@@ -1,0 +1,37 @@
+[package]
+name = "uwa"
+version = "0.1.0"
+authors = ["monsieurbadia <iam@monsieurbadia.com>"]
+edition = "2018"
+
+[lib]
+name = "uwa"
+path = "src/lib.rs"
+doctest = false
+
+[dependencies]
+unitest = { git = "https://github.com/monsieurbadia/unitest" }
+utilcase = { git = "https://github.com/monsieurbadia/utilcase" }
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "ch"
+path = "benches/macros/ch.bench.rs"
+harness = false
+
+[[bench]]
+name = "fs"
+path = "benches/macros/fs.bench.rs"
+harness = false
+
+[[bench]]
+name = "pattern"
+path = "benches/macros/pattern.bench.rs"
+harness = false
+
+[[bench]]
+name = "string"
+path = "benches/macros/string.bench.rs"
+harness = false
